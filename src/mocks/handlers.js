@@ -2,7 +2,7 @@ import { rest } from "msw";
 
 export const handlers = [
   // Handles a GET /gifs request
-  rest.get("/gifs", (req, res, ctx) => {
+  rest.get("https://miapi.com/gifs", (req, res, ctx) => {
     const gifs = [
       {
         title: "firstGif",
