@@ -1,0 +1,14 @@
+:root {
+    --spacing-xtiny: 4 px;
+    --spacing-tiny: 8 px;
+    --spacing-small: 12 px;
+    --spacing-mini: 16 px;
+    --spacing-base: 24 px;
+    --spacing-medium: 32 px;
+    --spacing-large: 48 px;
+    --spacing-xlarge: 64 px;
+    --spacing-huge: 96 px;
+
+    --gap-small: 24 px;
+    --gap-large: 48 px
+}
