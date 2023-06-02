@@ -1,0 +1,14 @@
+:root {
+  --font-size-small: 12.64px;
+  --font-size-base: 16px;
+  --font-size-h4: 18px;
+  --font-size-h3: 25.63px;
+  --font-size-h2: 36.41px;
+  --font-size-h1: 41.83px;
+  --line-height-small: 17px;
+  --line-height-base: 22px;
+  --line-height-h4: 25px;
+  --line-height-h3: 35px;
+  --line-height-h2: 50px;
+  --line-height-h1: 57px;
+}
