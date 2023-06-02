@@ -3,7 +3,7 @@ import App from "./App";
 import React from "react";
 import { server } from "./mocks/server";
 import { rest } from "msw";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
+import { SetupServer } from "msw/lib/node";
 
 test("se muestra un gif", async () => {
   // crear un gif con texto alternativo "anAlternativeText"
@@ -17,7 +17,7 @@ test("se muestra un gif", async () => {
   }
   //mockeamos la llamada para que nos devuelva un array con este gif solamente
   server.use(
-    rest.get("https://miapi.com/gifs", (req, res, ctx) => {
+    rest.get("http://localhost:3000/gifs", (req, res, ctx) => {
       return res(ctx.status(200), ctx.json([gif]))
     })
   )
@@ -25,7 +25,7 @@ test("se muestra un gif", async () => {
 
   //expect(await screen.findByText('firstGif')).toBeInTheDocument();
   // Vamos a buscar la imagen por el texto alternativo
-  expect( await screen.findByText(gif.anAlternativeText)).toBeInTheDocument()
+  expect( await screen.findByAltText("texto alternativo de la imagen")).toBeVisible()
   // vamos a ver que la imagen sea visible en el navegador
 });
 
