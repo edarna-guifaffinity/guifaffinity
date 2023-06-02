@@ -6,6 +6,7 @@ export const handlers = [
     const gifs = [
       {
         title: "firstGif",
+        anAlternativeText: "texto alternativo de la imagen",
         autor: "autor1",
         src: "srcGif1",
         tags: ["firstTag", "secondTag"],
@@ -14,6 +15,7 @@ export const handlers = [
       {
         title: "secondGif",
         autor: "autor1",
+        anAlternativeText: "texto alternativo de la imagen 2",
         src: "srcGif2",
         tags: ["firstTag", "secondTag"],
         likes: 10,
@@ -21,6 +23,7 @@ export const handlers = [
       {
         title: "thirdGif",
         autor: "autor2",
+        anAlternativeText: "texto alternativo de la imagen",
         src: "srcGif3",
         tags: ["secondTag"],
         likes: 2,
