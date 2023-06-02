@@ -5,6 +5,6 @@ import React from "react";
 test("renders learn react link", async () => {
   render(<App />);
 
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText('firstGif');
   expect(linkElement).toBeInTheDocument();
 });
