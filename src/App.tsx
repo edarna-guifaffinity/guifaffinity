@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <section>
+    <section className="background">
       {gifs.map((gif) => (
         <img alt={gif.anAlternativeText} src={gif.src} />
       ))}

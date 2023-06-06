@@ -3,10 +3,10 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--blue-color),
-    var(--purple-color),
-    var(--ligthYellow-color)
-  );
+  height: 100%;
+}
+
+img {
+  height: 200px;
+  width: 200px;
 }
