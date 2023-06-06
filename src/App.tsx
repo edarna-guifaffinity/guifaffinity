@@ -24,11 +24,13 @@ function App() {
   }
 
   return (
-    <section className="background">
-      {gifs.map((gif) => (
-        <img alt={gif.anAlternativeText} src={gif.src} />
-      ))}
-    </section>
+    <div className="app-container">
+      <section className="gifs">
+        {gifs.map((gif) => (
+          <img alt={gif.anAlternativeText} src={gif.src} />
+        ))}
+      </section>
+    </div>
   );
 }
 
