@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import './styles/reset.css'
-
+import "./styles/reset.css";
+import "./styles/variables/color_variables.css";
 
 if (process.env.NODE_ENV === "development") {
   const { worker } = require("./mocks/browser");
