@@ -6,7 +6,7 @@ export const handlers = [
     const gifs = [
       {
         anAlternativeText: "texto alternativo de la imagen 6",
-        src: "srcGif1",
+        src: "https://giphy.com/embed/B2vBunhgt9Pc4",
       },
       {
         anAlternativeText: "texto alternativo de la imagen 2",

@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import { r } from "msw/lib/glossary-de6278a9";
 
 export interface Gif {
   anAlternativeText: string;
@@ -26,8 +24,11 @@ function App() {
   }
 
   return (
-    //<p>{gifs[0].anAlternativeText}</p>
-    <img alt={gifs[0].anAlternativeText} src={gifs[0].src}></img>
+    <section>
+      {gifs.map((gif) => (
+        <img alt={gif.anAlternativeText} src={gif.src} />
+      ))}
+    </section>
   );
 }
 
