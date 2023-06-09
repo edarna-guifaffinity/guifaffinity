@@ -20,13 +20,23 @@ export const Detail = () => {
   }
 
   return (
-    <>
-      <p>titulo 2</p>
-      <p>Pep</p>
-      <img
-        src="https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif"
-        alt="texto alternativo de la imagen"
-      />
-    </>
+    <div className="detail-container">
+      <div className="title-container">
+        <span className="title-container_title">titulo 2</span>
+        <span className="title-container_author"> by Pep</span>
+      </div>
+      <div className="gif-container">
+        <div className="gif-container_img-wrapper">
+          <img
+            src="https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif"
+            alt="texto alternativo de la imagen"
+          />
+        </div>
+        <div className="gif-container_information">
+          <div className="gif-container_information_author"></div>
+          <div className="gif-container_information_tags"></div>
+        </div>
+      </div>
+    </div>
   );
 };

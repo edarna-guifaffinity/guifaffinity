@@ -18,7 +18,7 @@ test("Se muestra Detalle del Gif", async () => {
   );
   render(<Detail />);
   expect(await screen.findByText("titulo 2")).toBeInTheDocument();
-  expect(await screen.findByText("Pep")).toBeInTheDocument();
+  expect(await screen.findByText("by Pep")).toBeInTheDocument();
   expect(
     await screen.findByAltText("texto alternativo de la imagen")
   ).toBeVisible();
