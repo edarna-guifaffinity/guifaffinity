@@ -7,7 +7,7 @@ import { Gif } from "../../models/gifs.model";
 test("Se muestra Detalle del Gif", async () => {
   const gif: Gif = {
     anAlternativeText: "texto alternativo de la imagen",
-    src: "srcGif1",
+    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
     title: "titulo 2",
     author: "Pep",
   };
@@ -18,5 +18,8 @@ test("Se muestra Detalle del Gif", async () => {
   );
   render(<Detail />);
   expect(await screen.findByText("titulo 2")).toBeInTheDocument();
-  expect(await screen.findAllByAltText("Pep")).toBeInTheDocument();
+  expect(await screen.findByText("Pep")).toBeInTheDocument();
+  expect(
+    await screen.findByAltText("texto alternativo de la imagen")
+  ).toBeVisible();
 });
