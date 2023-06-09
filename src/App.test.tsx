@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import App, { Gif } from "./App";
+import App from "./App";
 import { server } from "./mocks/server";
 import { rest } from "msw";
+import { Gif } from "./models/gifs.model";
 
 test("se muestra un gif", async () => {
   // crear un gif con texto alternativo "anAlternativeText"
