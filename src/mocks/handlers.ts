@@ -8,7 +8,7 @@ import {
   RestRequest,
   rest,
 } from "msw";
-import { Gif } from "../App";
+import { Gif } from "../models/gifs.model";
 
 export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
   rest.get(

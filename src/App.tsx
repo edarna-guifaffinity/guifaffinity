@@ -1,10 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-
-export interface Gif {
-  anAlternativeText: string;
-  src: string;
-}
+import { Gif } from "./models/gifs.model";
 
 function App() {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
