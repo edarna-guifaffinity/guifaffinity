@@ -1,5 +1,12 @@
+body {
+  color: var(--white-color);
+}
+
 .title-container {
+  font-size: var(--font-size-h2);
+  line-height: var(--font-size-h2);
 }
 
 .title-container_title {
+  font-weight: 700;
 }
