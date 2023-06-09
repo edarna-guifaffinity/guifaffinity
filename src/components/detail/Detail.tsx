@@ -1,6 +1,14 @@
+import { useState } from "react";
 import "./Detail.css";
+import { Gif } from "../../models/gifs.model";
 
 export const Detail = () => {
+  const [gif, setGif] = useState<Gif | undefined>(undefined);
+
+  if (gif === undefined) {
+    return <div>cargando ...</div>;
+  }
+
   return (
     <>
       <p>titulo 2</p>
