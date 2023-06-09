@@ -33,8 +33,12 @@ export const Detail = () => {
           />
         </div>
         <div className="gif-container_information">
-          <div className="gif-container_information_author"></div>
-          <div className="gif-container_information_tags"></div>
+          <div className="gif-container_information_author">
+            <span>Pep</span>
+          </div>
+          <div className="gif-container_information_tags">
+            <span className="tag">#endregion</span>
+          </div>
         </div>
       </div>
     </div>
