@@ -26,3 +26,4 @@ test("Se muestra Detalle del Gif", async () => {
   ).toBeVisible();
   expect(await screen.findByText("#banana")).toBeInTheDocument();
 });
+

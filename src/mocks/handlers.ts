@@ -96,6 +96,7 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
         src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
         title: "titulo 2",
         author: "Pep",
+        tags: ["banana"],
       };
       return res(ctx.status(200), ctx.json(gif));
     }
