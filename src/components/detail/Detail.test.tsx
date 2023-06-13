@@ -10,6 +10,7 @@ test("Se muestra Detalle del Gif", async () => {
     src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
     title: "titulo 2",
     author: "Pep",
+    tags: ["banana"],
   };
   server.use(
     rest.get("http://localhost:3000/gif", (req, res, ctx) => {
@@ -23,4 +24,5 @@ test("Se muestra Detalle del Gif", async () => {
   expect(
     await screen.findByAltText("texto alternativo de la imagen")
   ).toBeVisible();
+  expect(await screen.findByText("#banana")).toBeInTheDocument();
 });
