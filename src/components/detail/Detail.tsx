@@ -38,7 +38,7 @@ export const Detail = () => {
             <span>{gif.author}</span>
           </div>
           <div className="gif-container_information_tags">
-            <Tag/>
+             <Tag tagName={gif.tags[0]}/>
           </div>
         </div>
       </div>

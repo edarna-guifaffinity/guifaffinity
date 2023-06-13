@@ -1,8 +1,9 @@
+import { FC } from "react";
 import "./Tag.css";
 
-export function Tag() {
+export const Tag: FC<{tagName: string}> = ({tagName}) => {
   return (
-    <span className="tag">#banana</span>
+    <span className="tag">#{tagName}</span>
   );
 }
 

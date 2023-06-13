@@ -3,5 +3,5 @@ export interface Gif {
   src: string;
   title?: string;
   author?: string;
-  tags?: string[];
+  tags: string[];
 }
