@@ -23,7 +23,7 @@ export const HomeList = () => {
     <div className="app-container">
       <section className="gifs">
         {gifs.map((gif) => (
-          <img alt={gif.anAlternativeText} src={gif.src} />
+          <img alt={gif.title} src={gif.src} />
         ))}
       </section>
     </div>
