@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Detail.css";
 import { Gif } from "../../models/gifs.model";
+import { Tag } from "../tag/Tag";
 
 export const Detail = () => {
   const [gif, setGif] = useState<Gif | undefined>(undefined);
@@ -22,22 +23,22 @@ export const Detail = () => {
   return (
     <div className="detail-container">
       <div className="title-container">
-        <span className="title-container_title">titulo 2</span>
-        <span className="title-container_author"> by Pep</span>
+        <span className="title-container_title">{gif.title}</span>
+        <span className="title-container_author"> by {gif.author}</span>
       </div>
       <div className="gif-container">
         <div className="gif-container_img-wrapper">
           <img
-            src="https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif"
-            alt="texto alternativo de la imagen"
+            src={gif.src}
+            alt={gif.anAlternativeText}
           />
         </div>
         <div className="gif-container_information">
           <div className="gif-container_information_author">
-            <span>Pep</span>
+            <span>{gif.author}</span>
           </div>
           <div className="gif-container_information_tags">
-            <span className="tag">#endregion</span>
+             <Tag tagName={gif.tags[0]}/>
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ test("se muestra un gif", async () => {
     {
       anAlternativeText: "texto alternativo de la imagen",
       src: "srcGif1",
+      tags: []
     },
   ];
   //mockeamos la llamada para que nos devuelva un array con este gif solamente
