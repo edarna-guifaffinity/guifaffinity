@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Detail.css";
-import { Gif } from "../../models/gifs.model";
+import { Gif } from "../../models/gif.model";
 import { Tag } from "../tag/Tag";
 
 export const Detail = () => {

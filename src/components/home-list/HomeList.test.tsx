@@ -1,6 +1,6 @@
 import { rest } from "msw";
 import { server } from "../../mocks/server";
-import { Gif } from "../../models/gifs.model";
+import { Gif } from "../../models/gif.model";
 import { HomeList } from "./HomeList";
 import { render, screen } from "@testing-library/react";
 

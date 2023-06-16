@@ -1,6 +1,6 @@
 import "./HomeList.css";
 import { useEffect, useState } from "react";
-import { Gif } from "../../models/gifs.model";
+import { Gif } from "../../models/gif.model";
 
 export const HomeList = () => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);

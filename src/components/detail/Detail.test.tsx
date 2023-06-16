@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { rest } from "msw";
 import { Detail } from "./Detail";
 import { server } from "../../mocks/server";
-import { Gif } from "../../models/gifs.model";
+import { Gif } from "../../models/gif.model";
 
 test("Se muestra Detalle del Gif", async () => {
   const gif: Gif = {
