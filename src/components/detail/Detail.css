@@ -25,3 +25,8 @@ body {
   font-weight: 700;
 }
 
+.gif-container_information_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-tiny);
+}

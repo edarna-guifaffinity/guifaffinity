@@ -1,7 +1,7 @@
 .tag {
-    border-radius: 109px;
-    background-color: var(--black-color);
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-  }
-  
+  padding: var(--spacing-tiny) var(--spacing-base);
+  border-radius: 109px;
+  background-color: var(--black-color);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
