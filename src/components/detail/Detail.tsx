@@ -10,7 +10,6 @@ export const Detail: FC = () => {
     const loadGif = async () => {
       const response = await fetch("http://localhost:3000/gifs/1");
       const res = await response.json();
-      console.log(res);
       setGif(res);
     };
     loadGif();
