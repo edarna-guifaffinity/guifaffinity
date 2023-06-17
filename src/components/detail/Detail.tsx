@@ -10,7 +10,6 @@ export const Detail: FC = () => {
     const loadGif = async () => {
       const response = await fetch("http://localhost:3000/gifs/1");
       const res = await response.json();
-      console.log(res);
       setGif(res);
     };
     loadGif();
@@ -19,12 +18,16 @@ export const Detail: FC = () => {
   if (gif === undefined) {
     return <div>cargando ...</div>;
   }
+  let username = gif.user.name;
+  if (username === "") {
+    username = "unknown";
+  }
 
   return (
     <div className="detail-container">
       <div className="title-container">
         <span className="title-container_title">{gif.title}</span>
-        <span className="title-container_author"> by {gif.user.name}</span>
+        <span className="title-container_author"> by {username}</span>
       </div>
       <div className="gif-container">
         <div className="gif-container_img-wrapper">
@@ -32,7 +35,7 @@ export const Detail: FC = () => {
         </div>
         <div className="gif-container_information">
           <div className="gif-container_information_author">
-            <span>{gif.user.name}</span>
+            <span>{username}</span>
           </div>
           <div className="gif-container_information_tags">
             <Tag tagName={gif.tags[0]} />

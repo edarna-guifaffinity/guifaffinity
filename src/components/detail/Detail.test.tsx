@@ -8,7 +8,7 @@ test("Se muestra Detalle del Gif", async () => {
   const gif: Gif = {
     id: "UX5ZG1rFUkjVsjVW4W",
     src: "https://media1.giphy.com/media/UX5ZG1rFUkjVsjVW4W/giphy.gif?cid=be655fb7f245f7d29df0fc743b70e3ee884dbaf31956e789&rid=giphy.gif",
-    title: "La Dodgers Reaction GIF by MLB",
+    title: "La Dodgers Reaction GIF",
     tags: [
       "#sports",
       "#reaction",
@@ -39,18 +39,40 @@ test("Se muestra Detalle del Gif", async () => {
     },
   };
   server.use(
-    rest.get("http://localhost:3000/gif", (req, res, ctx) => {
+    rest.get("http://localhost:3000/gifs/1", (req, res, ctx) => {
       return res(ctx.status(200), ctx.json(gif));
     })
   );
   render(<Detail />);
   expect(
-    await screen.findByText("La Dodgers Reaction GIF by MLB")
+    await screen.findByText("La Dodgers Reaction GIF")
   ).toBeInTheDocument();
   expect(await screen.findByText("by Kyle Sauer")).toBeInTheDocument();
   expect(await screen.findByText("Kyle Sauer")).toBeInTheDocument();
-  expect(
-    await screen.findByAltText("La Dodgers Reaction GIF by MLB")
-  ).toBeVisible();
+  expect(await screen.findByAltText("La Dodgers Reaction GIF")).toBeVisible();
   expect(await screen.findByText("#sports")).toBeInTheDocument();
+});
+
+test("Se muestra un gif sin autor", async () => {
+  const gif: Gif = {
+    id: "YleuWir5NTNVXkflSp",
+    src: "https://media3.giphy.com/media/J6OQEgOUNOU5BWfjFj/giphy.gif?cid=be655fb7f245f7d29df0fc743b70e3ee884dbaf31956e789&rid=giphy.gif",
+    title: "Movie Brazil GIF by MOODMAN",
+    tags: ["#movie", "#brazil", "#brazil the movie"],
+    user: {
+      avatar: "",
+      name: "",
+    },
+  };
+
+  server.use(
+    rest.get("http://localhost:3000/gifs/1", (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(gif));
+    })
+  );
+
+  render(<Detail />);
+
+  expect(await screen.findByText("by unknown")).toBeInTheDocument();
+  expect(await screen.findByText("unknown")).toBeInTheDocument();
 });
