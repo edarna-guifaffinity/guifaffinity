@@ -8,85 +8,41 @@ import {
   RestRequest,
   rest,
 } from "msw";
-import { Gif } from "../models/gifs.model";
+import { Gif } from "../models/gif.model";
 
-export const gifs: Gif[] = [
-  {
-    anAlternativeText: "texto alternativo de la imagen 1",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
+export const gif: Gif = {
+  id: "UX5ZG1rFUkjVsjVW4W",
+  src: "https://media1.giphy.com/media/UX5ZG1rFUkjVsjVW4W/giphy.gif?cid=be655fb7f245f7d29df0fc743b70e3ee884dbaf31956e789&rid=giphy.gif",
+  title: "La Dodgers Reaction GIF by MLB",
+  tags: [
+    "#sports",
+    "#reaction",
+    "#sport",
+    "#baseball",
+    "#mlb",
+    "#clap",
+    "#major league baseball",
+    "#dodgers",
+    "#la dodgers",
+    "#uppercut",
+    "#mlb 2020",
+    "#regular season 20",
+    "#2020 mlb",
+    "#2020 mlb regular season",
+    "#mlb regular season 2020",
+    "#20 regular season",
+    "#2020 regular season",
+    "#major league baseball 2020",
+    "#regular season 2020",
+    "#graterol",
+    "#brusdar",
+    "#major baseball league",
+  ],
+  user: {
+    avatar: "https://media4.giphy.com/avatars/kylesauer/Dy4l4EFEBKLT.gif",
+    name: "Kyle Sauer",
   },
-  {
-    anAlternativeText: "texto alternativo de la imagen 2",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 3",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 4",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 5",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 6",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 7",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 8",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 9",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 10",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 11",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 12",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 13",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 14",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-  {
-    anAlternativeText: "texto alternativo de la imagen 15",
-    src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-    tags: []
-  },
-];
+};
 
 export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
   rest.get(
@@ -96,6 +52,7 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
       res: ResponseComposition<DefaultBodyType>,
       ctx: RestContext
     ) => {
+      const gifs: Gif[] = Array(20).fill(gif);
       return res(ctx.status(200), ctx.json(gifs));
     }
   ),
@@ -106,13 +63,6 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
       res: ResponseComposition<DefaultBodyType>,
       ctx: RestContext
     ) => {
-      const gif: Gif = {
-        anAlternativeText: "texto alternativo de la imagen",
-        src: "https://media.tenor.com/TpWjyNO6wz8AAAAi/banana-dance.gif",
-        title: "titulo 2",
-        author: "Pep",
-        tags: ["banana"],
-      };
       return res(ctx.status(200), ctx.json(gif));
     }
   ),

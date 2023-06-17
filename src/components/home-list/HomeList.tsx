@@ -1,8 +1,8 @@
 import "./HomeList.css";
-import { useEffect, useState } from "react";
-import { Gif } from "../../models/gifs.model";
+import { FC, useEffect, useState } from "react";
+import { Gif } from "../../models/gif.model";
 
-export const HomeList = () => {
+export const HomeList: FC = () => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const HomeList = () => {
     <div className="app-container">
       <section className="gifs">
         {gifs.map((gif) => (
-          <img alt={gif.anAlternativeText} src={gif.src} />
+          <img alt={gif.title} src={gif.src} />
         ))}
       </section>
     </div>
