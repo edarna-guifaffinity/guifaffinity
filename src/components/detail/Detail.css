@@ -20,6 +20,8 @@ body {
 }
 
 .gif-container_information_author {
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
   font-weight: 700;
@@ -30,4 +32,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-tiny);
+}
+
+.gif-container_information_author_avatar {
+  height: 50px;
+  width: 50px;
 }
