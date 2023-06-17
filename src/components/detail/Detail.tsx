@@ -38,7 +38,9 @@ export const Detail: FC = () => {
             <span>{username}</span>
           </div>
           <div className="gif-container_information_tags">
-            <Tag tagName={gif.tags[0]} />
+            {gif.tags.map((tag) => {
+              return <Tag tagName={tag} />;
+            })}
           </div>
         </div>
       </div>
