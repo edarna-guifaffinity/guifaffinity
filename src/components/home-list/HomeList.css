@@ -1,0 +1,10 @@
+.imgList {
+  width: 200px;
+}
+
+.gifs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-small);
+  justify-content: center;
+}

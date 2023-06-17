@@ -30,11 +30,14 @@ export const Detail: FC = () => {
         <span className="title-container_author"> by {username}</span>
       </div>
       <div className="gif-container">
-        <div className="gif-container_img-wrapper">
-          <img src={gif.src} alt={gif.title} />
-        </div>
+        <img className="gif-container_img" src={gif.src} alt={gif.title} />
         <div className="gif-container_information">
           <div className="gif-container_information_author">
+            <img
+              className="gif-container_information_author_avatar"
+              src={gif.user.avatar}
+              alt={username}
+            />
             <span>{username}</span>
           </div>
           <div className="gif-container_information_tags">

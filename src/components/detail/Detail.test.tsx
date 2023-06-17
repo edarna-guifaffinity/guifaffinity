@@ -49,6 +49,7 @@ test("Se muestra Detalle del Gif", async () => {
   ).toBeInTheDocument();
   expect(await screen.findByText("by Kyle Sauer")).toBeInTheDocument();
   expect(await screen.findByText("Kyle Sauer")).toBeInTheDocument();
+  expect(await screen.findByAltText("Kyle Sauer")).toBeInTheDocument();
   expect(await screen.findByAltText("La Dodgers Reaction GIF")).toBeVisible();
   expect(await screen.findByText("#sports")).toBeInTheDocument();
 });
@@ -75,4 +76,5 @@ test("Se muestra un gif sin autor", async () => {
 
   expect(await screen.findByText("by unknown")).toBeInTheDocument();
   expect(await screen.findByText("unknown")).toBeInTheDocument();
+  expect(await screen.findByAltText("unknown")).toBeInTheDocument();
 });

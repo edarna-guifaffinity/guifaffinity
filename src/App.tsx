@@ -4,15 +4,10 @@ import { HomeList } from "./components/home-list";
 
 function App() {
   return (
-    <>
-    <Detail />
-    <HomeList />
-    </>
-    /*
     <div className="app-container">
-      <section className="gifs"></section>
+      <Detail />
+      <HomeList />
     </div>
-    */
   );
 }
 

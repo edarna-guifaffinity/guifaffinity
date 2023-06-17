@@ -17,9 +17,17 @@ body {
 
 .gif-container {
   display: flex;
+  margin-top: var(--spacing-medium);
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.gif-container_information {
+  margin-left: var(--spacing-medium);
 }
 
 .gif-container_information_author {
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
   font-weight: 700;
@@ -30,4 +38,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-tiny);
+}
+
+.gif-container_information_author_avatar {
+  height: 50px;
+  width: 50px;
+  margin-right: var(--spacing-mini);
+}
+
+.gif-container_img {
+  max-width: 500px;
 }

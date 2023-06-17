@@ -6,11 +6,6 @@ body {
   height: 100%;
 }
 
-img {
-  height: 200px;
-  width: 200px;
-}
-
 .app-container {
   margin-left: 150px;
   margin-right: 150px;
