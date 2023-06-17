@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import "./Detail.css";
 import { Gif } from "../../models/gif.model";
 import { Tag } from "../tag/Tag";
 
-export const Detail = () => {
+export const Detail: FC = () => {
   const [gif, setGif] = useState<Gif | undefined>(undefined);
 
   useEffect(() => {

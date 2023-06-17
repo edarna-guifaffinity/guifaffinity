@@ -1,8 +1,8 @@
 import "./HomeList.css";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Gif } from "../../models/gif.model";
 
-export const HomeList = () => {
+export const HomeList: FC = () => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
 
   useEffect(() => {
