@@ -20,12 +20,10 @@ export const HomeList: FC = () => {
   }
 
   return (
-    <div className="app-container">
-      <section className="gifs">
-        {gifs.map((gif) => (
-          <img alt={gif.title} src={gif.src} />
-        ))}
-      </section>
-    </div>
+    <section className="gifs">
+      {gifs.map((gif) => (
+        <img className="imgList" alt={gif.title} src={gif.src} />
+      ))}
+    </section>
   );
 };
