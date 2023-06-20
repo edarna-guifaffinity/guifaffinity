@@ -1,5 +1,6 @@
 .imgList {
-  width: 200px;
+  max-width: 200px;
+  border-radius: 15px;
 }
 
 .gifs {
