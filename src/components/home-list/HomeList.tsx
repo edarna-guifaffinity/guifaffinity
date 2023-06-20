@@ -1,7 +1,6 @@
 import "./HomeList.css";
 import { FC, useEffect, useState } from "react";
 import { Gif } from "../../models/gif.model";
-import { Link } from "react-router-dom";
 
 export const HomeList: FC = () => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);

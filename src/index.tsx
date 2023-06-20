@@ -8,7 +8,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomeList } from "./components/home-list";
 import { Detail } from "./components/detail/Detail";
 
 if (process.env.NODE_ENV === "development") {
