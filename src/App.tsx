@@ -5,7 +5,6 @@ import { HomeList } from "./components/home-list";
 function App() {
   return (
     <div className="app-container">
-      <Detail />
       <HomeList />
     </div>
   );

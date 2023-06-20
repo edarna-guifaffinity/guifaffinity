@@ -43,7 +43,7 @@ test("se muestra un gif", async () => {
   ];
   //mockeamos la llamada para que nos devuelva un array con este gif solamente
   server.use(
-    rest.get("http://localhost:3000/gifs", (req, res, ctx) => {
+    rest.get("http://localhost:3000/api/gifs", (req, res, ctx) => {
       return res(ctx.status(200), ctx.json(gifs));
     })
   );
