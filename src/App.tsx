@@ -2,11 +2,7 @@ import "./App.css";
 import { HomeList } from "./components/home-list";
 
 function App() {
-  return (
-    <div className="app-container">
-      <HomeList />
-    </div>
-  );
+  return <HomeList />;
 }
 
 export default App;
