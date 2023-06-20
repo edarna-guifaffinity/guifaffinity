@@ -23,9 +23,9 @@ export const HomeList: FC = () => {
   return (
     <section className="gifs">
       {gifs.map((gif) => (
-        <Link to={`gif/${gif.id}`}>
+        <a href={`gif/${gif.id}`}>
           <img className="imgList" alt={gif.title} src={gif.src} />
-        </Link>
+        </a>
       ))}
     </section>
   );

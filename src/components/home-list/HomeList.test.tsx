@@ -4,7 +4,7 @@ import { Gif } from "../../models/gif.model";
 import { HomeList } from "./HomeList";
 import { render, screen } from "@testing-library/react";
 
-test("se muestra un gif", async () => {
+test("se muestra el listado con un gif", async () => {
   // crear un gif con texto alternativo "anAlternativeText"
   const gifs: Gif[] = [
     {
