@@ -46,7 +46,7 @@ export const gif: Gif = {
 
 export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
   rest.get(
-    "http://localhost:3000/gifs",
+    "http://localhost:3000/api/gifs",
     (
       req: RestRequest<never, PathParams<string>>,
       res: ResponseComposition<DefaultBodyType>,
@@ -57,7 +57,7 @@ export const handlers: RestHandler<MockedRequest<DefaultBodyType>>[] = [
     }
   ),
   rest.get(
-    "http://localhost:3000/gifs/1",
+    "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W",
     (
       req: RestRequest<never, PathParams<string>>,
       res: ResponseComposition<DefaultBodyType>,

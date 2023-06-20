@@ -4,7 +4,7 @@ import { Gif } from "../../models/gif.model";
 import { HomeList } from "./HomeList";
 import { render, screen } from "@testing-library/react";
 
-test("se muestra un gif", async () => {
+test("se muestra el listado con un gif", async () => {
   // crear un gif con texto alternativo "anAlternativeText"
   const gifs: Gif[] = [
     {
@@ -43,7 +43,7 @@ test("se muestra un gif", async () => {
   ];
   //mockeamos la llamada para que nos devuelva un array con este gif solamente
   server.use(
-    rest.get("http://localhost:3000/gifs", (req, res, ctx) => {
+    rest.get("http://localhost:3000/api/gifs", (req, res, ctx) => {
       return res(ctx.status(200), ctx.json(gifs));
     })
   );

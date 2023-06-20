@@ -8,7 +8,9 @@ export const Detail: FC = () => {
 
   useEffect(() => {
     const loadGif = async () => {
-      const response = await fetch("http://localhost:3000/gifs/1");
+      const response = await fetch(
+        "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W"
+      );
       const res = await response.json();
       setGif(res);
     };

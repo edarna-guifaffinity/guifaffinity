@@ -39,9 +39,12 @@ test("Se muestra Detalle del Gif", async () => {
     },
   };
   server.use(
-    rest.get("http://localhost:3000/gifs/1", (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(gif));
-    })
+    rest.get(
+      "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W",
+      (req, res, ctx) => {
+        return res(ctx.status(200), ctx.json(gif));
+      }
+    )
   );
   render(<Detail />);
   expect(
@@ -67,9 +70,12 @@ test("Se muestra un gif sin autor", async () => {
   };
 
   server.use(
-    rest.get("http://localhost:3000/gifs/1", (req, res, ctx) => {
-      return res(ctx.status(200), ctx.json(gif));
-    })
+    rest.get(
+      "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W",
+      (req, res, ctx) => {
+        return res(ctx.status(200), ctx.json(gif));
+      }
+    )
   );
 
   render(<Detail />);

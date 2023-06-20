@@ -7,7 +7,7 @@ export const HomeList: FC = () => {
 
   useEffect(() => {
     const loadGifs = async () => {
-      const response = await fetch("http://localhost:3000/gifs");
+      const response = await fetch("http://localhost:3000/api/gifs");
       const res = await response.json();
       console.log(res);
       setGifs(res);
@@ -22,7 +22,9 @@ export const HomeList: FC = () => {
   return (
     <section className="gifs">
       {gifs.map((gif) => (
-        <img className="imgList" alt={gif.title} src={gif.src} />
+        <a href={`gif/${gif.id}`}>
+          <img className="imgList" alt={gif.title} src={gif.src} />
+        </a>
       ))}
     </section>
   );
