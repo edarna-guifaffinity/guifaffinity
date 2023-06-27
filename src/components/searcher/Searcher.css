@@ -1,0 +1,11 @@
+.searcher_button {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--yellow-color),
+    var(--ligthBlue-color),
+    var(--lightGreen-color)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
