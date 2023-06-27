@@ -1,0 +1,9 @@
+.title {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+}
