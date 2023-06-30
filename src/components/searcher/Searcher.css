@@ -1,0 +1,25 @@
+.searcher {
+  display: flex;
+}
+
+.searcher_button {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--yellow-color),
+    var(--ligthBlue-color),
+    var(--lightGreen-color)
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0 15px 15px 0;
+  height: 70px;
+  width: 70px;
+  border-width: 0px;
+}
+
+.searcher_input {
+  border-radius: 15px 0 0 15px;
+  flex-grow: 1;
+  border-width: 0px;
+}

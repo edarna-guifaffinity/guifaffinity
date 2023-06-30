@@ -1,11 +1,9 @@
 .imgList {
-  max-width: 200px;
-  border-radius: 15px;
+  width: 100%;
 }
 
 .gifs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap-small);
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap-large);
 }
