@@ -4,6 +4,13 @@ import { Detail } from "./Detail";
 import { server } from "../../mocks/server";
 import { Gif } from "../../models/gif.model";
 
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"), // use actual for all non-hook parts
+  useParams: () => ({
+    gifId: "mygifId",
+  }),
+}));
+
 test("Se muestra Detalle del Gif", async () => {
   const gif: Gif = {
     id: "UX5ZG1rFUkjVsjVW4W",
@@ -39,13 +46,11 @@ test("Se muestra Detalle del Gif", async () => {
     },
   };
   server.use(
-    rest.get(
-      "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W",
-      (req, res, ctx) => {
-        return res(ctx.status(200), ctx.json(gif));
-      }
-    )
+    rest.get("http://localhost:3000/api/gifs/mygifId", (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(gif));
+    })
   );
+
   render(<Detail />);
   expect(
     await screen.findByText("La Dodgers Reaction GIF")
@@ -70,12 +75,9 @@ test("Se muestra un gif sin autor", async () => {
   };
 
   server.use(
-    rest.get(
-      "http://localhost:3000/api/gifs/UX5ZG1rFUkjVsjVW4W",
-      (req, res, ctx) => {
-        return res(ctx.status(200), ctx.json(gif));
-      }
-    )
+    rest.get("http://localhost:3000/api/gifs/mygifId", (req, res, ctx) => {
+      return res(ctx.status(200), ctx.json(gif));
+    })
   );
 
   render(<Detail />);

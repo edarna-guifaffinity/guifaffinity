@@ -22,7 +22,7 @@ export const HomeList: FC = () => {
   return (
     <section className="gifs">
       {gifs.map((gif) => (
-        <a href={`gif/${gif.id}`}>
+        <a key={gif.id} href={`gif/${gif.id}`}>
           <img className="imgList" alt={gif.title} src={gif.src} />
         </a>
       ))}
