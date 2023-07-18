@@ -10,11 +10,11 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Detail } from "./components/detail/Detail";
 
-if (process.env.NODE_ENV === "development") {
+/* if (process.env.NODE_ENV === "development") {
   const { worker } = require("./mocks/browser");
 
   worker.start();
-}
+} */
 
 const router = createBrowserRouter([
   {
