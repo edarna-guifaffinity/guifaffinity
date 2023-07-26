@@ -1,5 +1,5 @@
 import { GifRepository } from "../domain/repositories/GifRepository";
-import { Gif } from "../models/gif.model";
+import { Gif } from "../domain/models/gif.model";
 
 const apiUrl = "http://localhost:3000/api";
 

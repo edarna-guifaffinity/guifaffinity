@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import "./Detail.css";
-import { Gif } from "../../models/gif.model";
+import { Gif } from "../../domain/models/gif.model";
 import { Tag } from "../tag/Tag";
 import { useParams } from "react-router-dom";
 import { gifService } from "../../domain/services/GifService";

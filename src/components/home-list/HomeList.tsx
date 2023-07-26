@@ -1,6 +1,6 @@
 import "./HomeList.css";
 import { FC, useEffect, useState } from "react";
-import { Gif } from "../../models/gif.model";
+import { Gif } from "../../domain/models/gif.model";
 import { gifService } from "../../domain/services/GifService";
 
 export const HomeList: FC = () => {

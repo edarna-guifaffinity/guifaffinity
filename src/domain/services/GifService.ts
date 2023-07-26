@@ -1,5 +1,5 @@
 import { GifRepositoryImpl } from "../../infrastructure/GifRepository";
-import { Gif } from "../../models/gif.model";
+import { Gif } from "../models/gif.model";
 
 const getGifs = (): Promise<Gif[]> => {
   return GifRepositoryImpl.getGifs();
