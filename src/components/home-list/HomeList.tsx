@@ -1,16 +1,15 @@
 import "./HomeList.css";
 import { FC, useEffect, useState } from "react";
 import { Gif } from "../../models/gif.model";
+import { gifService } from "../../domain/services/GifService";
 
 export const HomeList: FC = () => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
 
   useEffect(() => {
     const loadGifs = async () => {
-      const response = await fetch("http://localhost:3000/api/gifs");
-      const res = await response.json();
-      console.log(res);
-      setGifs(res);
+      const gifs = await gifService.getGifs();
+      setGifs(gifs);
     };
     loadGifs();
   }, []);
