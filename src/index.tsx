@@ -3,12 +3,10 @@ import "./styles/reset.css";
 import "./styles/variables/color_variables.css";
 import "./styles/variables/font_variables.css";
 import "./styles/variables/spacing_variables.css";
-import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Detail } from "./components/detail/Detail";
+import { Router } from "./components/router/Router";
 
 /* if (process.env.NODE_ENV === "development") {
   const { worker } = require("./mocks/browser");
@@ -16,24 +14,13 @@ import { Detail } from "./components/detail/Detail";
   worker.start();
 } */
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/gif/:gifId",
-    element: <Detail />,
-  },
-]);
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <div className="app-container">
     <React.StrictMode>
-      <RouterProvider router={router}></RouterProvider>
+      <Router></Router>
     </React.StrictMode>
   </div>
 );

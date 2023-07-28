@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { rest } from "msw";
 import { Detail } from "./Detail";
 import { server } from "../../mocks/server";
-import { Gif } from "../../models/gif.model";
+import { Gif } from "../../domain/models/gif.model";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"), // use actual for all non-hook parts

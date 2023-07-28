@@ -8,7 +8,7 @@ import {
   RestRequest,
   rest,
 } from "msw";
-import { Gif } from "../models/gif.model";
+import { Gif } from "../domain/models/gif.model";
 
 export const gif: Gif = {
   id: "UX5ZG1rFUkjVsjVW4W",
